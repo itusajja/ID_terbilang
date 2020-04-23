@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>ID Terbilang</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h2>ID Terbilang</h2>
+            <small>The Best Practice to convert number to Bahasa Indonesia Text.</small>
+            <div class="row">
+                <div class="col-md-4 offset-md-4 mb-3">
+                    <label for="cc-name">Masukkan Angka : </label>
+                    <input onkeyup="return get_terbilang_id(this)" type="number" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Angkan yang anda masukkan akan secara ajaib dapat terconvert menjadi bacaan / terbilang.
+                        <br />
+                        <a href="https://paypal.me/itusajja">Donate &#10084;&#65039; </a> |
+                        <a href="https://paypal.me/itusajja">Download</a>
+                    </small>
+                </div>
+            </div>
+            <p class="lead tampilan_hasil"></p>
+            <hr class="mb-4">
+        </div>
+        <pre class="col-md-6 offset-md-3 mb-3"><code>&lt;DOCTYPE html/&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;ID Terbilang&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input onkeyup="return get_terbilang_id(this)"/&gt;
+&lt;p class="tampilan_hasil"&gt;&lt;/p&gt;
+&lt;script type="text/javascript" 
+src="path/to/terbilang.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+function get_terbilang_id(elm) {
+    let teks = id_terbilang(elm.value)
+    document.querySelector('.tampilan_hasil').innerHTML = teks
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; Maret 2020 Itusajja</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://paypal.me/itusajja">Donate Now &#10084;&#65039;</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script type="text/javascript" src="build/terbilang.min.js"></script>
+    <script type="text/javascript">
+    function get_terbilang_id(elm) {
+        let teks = id_terbilang(elm.value)
+        document.querySelector('.tampilan_hasil').innerHTML = teks
+    }
+    </script>
+</body>
+
+</html>
