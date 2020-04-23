@@ -71,7 +71,7 @@ window.id_terbilang = (masukan) => {
             return teks_kelompok_1digit.reverse().join(" ")
         }
         let baca = baca_in(kelompok_1digit)
-        if (kelompok_1digit.length == 1 && kelompok_1digit[0] == "1" && i == 1) {
+        if (kelompok_1digit[0] == "1" && i == 1) {
             baca = angka_nama[kelompok_1digit[0]].split(pemisah)[0]
         }
         nama_posisi_tetap = (baca == "  ") ? "" : nama_posisi_tetap;
